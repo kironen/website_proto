@@ -1,70 +1,64 @@
 
 import React from 'react';
-import { Progress } from "@/components/ui/progress";
 
 const SkillsSection = () => {
-  const skills = [
-    { name: 'JavaScript/TypeScript', level: 90 },
-    { name: 'React/NextJS', level: 85 },
-    { name: 'Node.js', level: 80 },
-    { name: 'Python', level: 75 },
-    { name: 'SQL/NoSQL Databases', level: 85 },
-    { name: 'Docker/Kubernetes', level: 70 },
-  ];
+  const skills = {
+    frontend: ['JavaScript/TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'HTML5/CSS3'],
+    backend: ['Node.js', 'Python', 'SQL/NoSQL Databases', 'GraphQL', 'RESTful APIs'],
+    tools: ['Git', 'Docker', 'AWS', 'CI/CD', 'Jest/Testing Library']
+  };
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-engineer-darkBlue mb-4">Skills</h2>
-          <div className="w-20 h-1 bg-engineer-blue mx-auto"></div>
-        </div>
+        <h2 className="section-heading text-center">Skills</h2>
         
-        <div className="max-w-3xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Technical Expertise</h3>
-              {skills.slice(0, 3).map((skill, index) => (
-                <div key={index} className="mb-6">
-                  <div className="flex justify-between mb-2">
-                    <span className="font-medium">{skill.name}</span>
-                    <span>{skill.level}%</span>
-                  </div>
-                  <Progress value={skill.level} className="h-2" />
-                </div>
-              ))}
+              <h3 className="text-xl font-medium mb-6 border-b pb-3">Frontend</h3>
+              <ul className="space-y-3">
+                {skills.frontend.map((skill, index) => (
+                  <li key={index} className="text-gray-700">{skill}</li>
+                ))}
+              </ul>
             </div>
             
             <div>
-              <h3 className="text-2xl font-bold mb-6">Additional Skills</h3>
-              {skills.slice(3).map((skill, index) => (
-                <div key={index} className="mb-6">
-                  <div className="flex justify-between mb-2">
-                    <span className="font-medium">{skill.name}</span>
-                    <span>{skill.level}%</span>
-                  </div>
-                  <Progress value={skill.level} className="h-2" />
-                </div>
-              ))}
+              <h3 className="text-xl font-medium mb-6 border-b pb-3">Backend</h3>
+              <ul className="space-y-3">
+                {skills.backend.map((skill, index) => (
+                  <li key={index} className="text-gray-700">{skill}</li>
+                ))}
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-medium mb-6 border-b pb-3">Tools & Methods</h3>
+              <ul className="space-y-3">
+                {skills.tools.map((skill, index) => (
+                  <li key={index} className="text-gray-700">{skill}</li>
+                ))}
+              </ul>
             </div>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-            <div className="text-center p-4 bg-engineer-lightGray rounded-lg">
-              <span className="block text-4xl font-bold text-engineer-blue">20+</span>
-              <span>Projects</span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
+            <div className="text-center">
+              <span className="block text-4xl font-medium">20+</span>
+              <span className="text-gray-600">Projects</span>
             </div>
-            <div className="text-center p-4 bg-engineer-lightGray rounded-lg">
-              <span className="block text-4xl font-bold text-engineer-blue">5+</span>
-              <span>Years Exp</span>
+            <div className="text-center">
+              <span className="block text-4xl font-medium">5+</span>
+              <span className="text-gray-600">Years Exp</span>
             </div>
-            <div className="text-center p-4 bg-engineer-lightGray rounded-lg">
-              <span className="block text-4xl font-bold text-engineer-blue">15+</span>
-              <span>Clients</span>
+            <div className="text-center">
+              <span className="block text-4xl font-medium">15+</span>
+              <span className="text-gray-600">Clients</span>
             </div>
-            <div className="text-center p-4 bg-engineer-lightGray rounded-lg">
-              <span className="block text-4xl font-bold text-engineer-blue">99%</span>
-              <span>Satisfaction</span>
+            <div className="text-center">
+              <span className="block text-4xl font-medium">24/7</span>
+              <span className="text-gray-600">Support</span>
             </div>
           </div>
         </div>

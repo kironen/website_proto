@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from 'lucide-react';
@@ -13,78 +12,92 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-engineer-darkBlue mb-4">Get In Touch</h2>
-          <div className="w-20 h-1 bg-engineer-blue mx-auto"></div>
-        </div>
+        <h2 className="section-heading text-center">Contact</h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-            <p className="mb-8 text-engineer-gray">
-              Feel free to reach out to me for collaborations, job opportunities, or just to say hello!
-            </p>
-            
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="mr-4 bg-engineer-lightGray p-3 rounded-full">
-                  <Mail className="h-5 w-5 text-engineer-blue" />
-                </div>
-                <div>
-                  <h4 className="font-bold">Email</h4>
-                  <p className="text-engineer-gray">alex.smith@example.com</p>
-                </div>
-              </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div>
+              <p className="text-lg mb-8">
+                I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+              </p>
               
-              <div className="flex items-start">
-                <div className="mr-4 bg-engineer-lightGray p-3 rounded-full">
-                  <Phone className="h-5 w-5 text-engineer-blue" />
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="mr-4">
+                    <Mail className="h-6 w-6 text-gray-400" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium">Email</h4>
+                    <p className="text-gray-600">alex.smith@example.com</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-bold">Phone</h4>
-                  <p className="text-engineer-gray">+1 (555) 123-4567</p>
+                
+                <div className="flex items-start">
+                  <div className="mr-4">
+                    <Phone className="h-6 w-6 text-gray-400" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium">Phone</h4>
+                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="mr-4 bg-engineer-lightGray p-3 rounded-full">
-                  <MapPin className="h-5 w-5 text-engineer-blue" />
-                </div>
-                <div>
-                  <h4 className="font-bold">Location</h4>
-                  <p className="text-engineer-gray">San Francisco, CA</p>
+                
+                <div className="flex items-start">
+                  <div className="mr-4">
+                    <MapPin className="h-6 w-6 text-gray-400" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium">Location</h4>
+                    <p className="text-gray-600">San Francisco, CA</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          
-          <div>
-            <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div>
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block mb-1">Name</label>
-                  <Input id="name" placeholder="Your Name" required />
+                  <label htmlFor="name" className="block mb-2 font-medium">Name</label>
+                  <Input 
+                    id="name" 
+                    placeholder="Your Name" 
+                    required 
+                    className="border-gray-300 focus:border-black focus:ring-0 transition-colors"
+                  />
                 </div>
+                
                 <div>
-                  <label htmlFor="email" className="block mb-1">Email</label>
-                  <Input id="email" type="email" placeholder="Your Email" required />
+                  <label htmlFor="email" className="block mb-2 font-medium">Email</label>
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="Your Email" 
+                    required 
+                    className="border-gray-300 focus:border-black focus:ring-0 transition-colors"
+                  />
                 </div>
-              </div>
-              <div>
-                <label htmlFor="subject" className="block mb-1">Subject</label>
-                <Input id="subject" placeholder="Subject" required />
-              </div>
-              <div>
-                <label htmlFor="message" className="block mb-1">Message</label>
-                <Textarea id="message" placeholder="Your Message" rows={5} required />
-              </div>
-              <Button type="submit" className="bg-engineer-blue hover:bg-blue-600 text-white w-full sm:w-auto">
-                Send Message
-              </Button>
-            </form>
+                
+                <div>
+                  <label htmlFor="message" className="block mb-2 font-medium">Message</label>
+                  <Textarea 
+                    id="message" 
+                    placeholder="Your Message" 
+                    rows={5} 
+                    required 
+                    className="border-gray-300 focus:border-black focus:ring-0 transition-colors"
+                  />
+                </div>
+                
+                <button 
+                  type="submit" 
+                  className="px-8 py-3 bg-black text-white font-medium hover:bg-gray-800 transition-colors"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

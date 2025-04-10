@@ -1,8 +1,6 @@
 
 import React from 'react';
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ExternalLink, Github } from 'lucide-react';
-import { Badge } from "@/components/ui/badge";
 
 const ProjectsSection = () => {
   const projects = [
@@ -33,56 +31,60 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-engineer-lightGray">
+    <section id="projects" className="py-24 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-engineer-darkBlue mb-4">Projects</h2>
-          <div className="w-20 h-1 bg-engineer-blue mx-auto"></div>
-          <p className="mt-6 max-w-2xl mx-auto">
-            Here are some of my recent projects. Each one presented unique challenges that helped me grow as a developer.
-          </p>
-        </div>
+        <h2 className="section-heading text-center">Selected Projects</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-4xl mx-auto">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
-                />
+            <div 
+              key={index} 
+              className="mb-24 last:mb-0 grid grid-cols-1 md:grid-cols-12 gap-8 items-center"
+            >
+              <div className={`md:col-span-7 ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                <div className="overflow-hidden bg-gray-100 rounded">
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-auto hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-engineer-gray mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
+              
+              <div className={`md:col-span-5 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                <h3 className="text-2xl font-medium mb-3">{project.title}</h3>
+                <p className="text-gray-600 mb-4">{project.description}</p>
+                
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, idx) => (
-                    <Badge key={idx} variant="secondary">{tag}</Badge>
+                    <span key={idx} className="inline-block bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded">
+                      {tag}
+                    </span>
                   ))}
                 </div>
-              </CardContent>
-              <CardFooter className="px-6 py-4 bg-white border-t flex justify-between">
-                <a 
-                  href={project.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center text-engineer-gray hover:text-engineer-blue transition-colors"
-                >
-                  <Github className="h-4 w-4 mr-1" />
-                  <span>Code</span>
-                </a>
-                <a 
-                  href={project.demo} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center text-engineer-gray hover:text-engineer-blue transition-colors"
-                >
-                  <span>Live Demo</span>
-                  <ExternalLink className="h-4 w-4 ml-1" />
-                </a>
-              </CardFooter>
-            </Card>
+                
+                <div className="flex space-x-4">
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-700 hover:text-black transition-colors"
+                  >
+                    <Github className="h-4 w-4 mr-2" />
+                    <span>Code</span>
+                  </a>
+                  <a 
+                    href={project.demo} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-700 hover:text-black transition-colors"
+                  >
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    <span>Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>

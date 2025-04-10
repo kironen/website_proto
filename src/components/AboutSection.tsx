@@ -1,47 +1,48 @@
 
 import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, GraduationCap, Award } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-engineer-lightGray">
+    <section id="about" className="py-24 bg-white border-t border-gray-100">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-engineer-darkBlue mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-engineer-blue mx-auto"></div>
-        </div>
+        <h2 className="section-heading text-center">About</h2>
         
-        <div className="max-w-3xl mx-auto">
-          <p className="text-lg text-center mb-12">
-            I'm a passionate software engineer with 5+ years of experience designing and building scalable web applications.
-            I enjoy tackling complex problems and creating efficient, maintainable solutions.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl mx-auto">
+          <div>
+            <p className="text-lg mb-6">
+              I'm a passionate software engineer with 5+ years of experience designing 
+              and building scalable web applications. I enjoy tackling complex problems 
+              and creating efficient, maintainable solutions.
+            </p>
+            <p className="text-lg mb-6">
+              My approach combines technical expertise with a deep understanding of 
+              user needs, resulting in products that not only work flawlessly but 
+              also provide exceptional user experiences.
+            </p>
+            <p className="text-lg">
+              When I'm not coding, you can find me hiking, reading about new technologies, 
+              or experimenting with photography.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6 flex flex-col items-center text-center">
-                <GraduationCap className="h-12 w-12 text-engineer-blue mb-4" />
-                <h3 className="text-xl font-bold mb-2">Education</h3>
-                <p className="text-engineer-gray">M.S. Computer Science<br />University of Technology</p>
-              </CardContent>
-            </Card>
+          <div className="space-y-8">
+            <div>
+              <h3 className="font-medium text-xl mb-3">Education</h3>
+              <p className="text-gray-600">M.S. Computer Science, University of Technology</p>
+              <p className="text-gray-600">B.S. Software Engineering, State University</p>
+            </div>
             
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6 flex flex-col items-center text-center">
-                <Briefcase className="h-12 w-12 text-engineer-blue mb-4" />
-                <h3 className="text-xl font-bold mb-2">Experience</h3>
-                <p className="text-engineer-gray">Senior Developer<br />Tech Solutions Inc.</p>
-              </CardContent>
-            </Card>
+            <div>
+              <h3 className="font-medium text-xl mb-3">Experience</h3>
+              <p className="text-gray-600">Senior Developer, Tech Solutions Inc. (2020-present)</p>
+              <p className="text-gray-600">Software Engineer, Digital Innovations LLC (2018-2020)</p>
+            </div>
             
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6 flex flex-col items-center text-center">
-                <Award className="h-12 w-12 text-engineer-blue mb-4" />
-                <h3 className="text-xl font-bold mb-2">Recognition</h3>
-                <p className="text-engineer-gray">Best Innovation Award<br />DevCon 2023</p>
-              </CardContent>
-            </Card>
+            <div>
+              <h3 className="font-medium text-xl mb-3">Recognition</h3>
+              <p className="text-gray-600">Best Innovation Award, DevCon 2023</p>
+              <p className="text-gray-600">Open Source Contributor, React Community</p>
+            </div>
           </div>
         </div>
       </div>
