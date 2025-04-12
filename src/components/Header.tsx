@@ -2,13 +2,26 @@
 import React from 'react';
 import { useState } from 'react';
 import { X, Menu } from "lucide-react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Helper to determine if a link is for the current page
+  const isCurrentPage = (path: string) => {
+    if (path.startsWith('#') && location.pathname === '/') {
+      return true;
+    }
+    return path === location.pathname;
   };
 
   return (
@@ -20,10 +33,30 @@ const Header = () => {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-10">
-          <a href="#about" className="text-gray-600 hover:text-black transition-colors">About</a>
-          <a href="#skills" className="text-gray-600 hover:text-black transition-colors">Skills</a>
-          <Link to="/projects" className="text-gray-600 hover:text-black transition-colors">Projects</Link>
-          <a href="#contact" className="text-gray-600 hover:text-black transition-colors">Contact</a>
+          <Link 
+            to="/#about" 
+            className={`${isCurrentPage('/#about') ? 'text-black' : 'text-gray-600'} hover:text-black transition-colors`}
+          >
+            About
+          </Link>
+          <Link 
+            to="/#skills" 
+            className={`${isCurrentPage('/#skills') ? 'text-black' : 'text-gray-600'} hover:text-black transition-colors`}
+          >
+            Skills
+          </Link>
+          <Link 
+            to="/projects" 
+            className={`${isCurrentPage('/projects') ? 'text-black' : 'text-gray-600'} hover:text-black transition-colors`}
+          >
+            Projects
+          </Link>
+          <Link 
+            to="/#contact" 
+            className={`${isCurrentPage('/#contact') ? 'text-black' : 'text-gray-600'} hover:text-black transition-colors`}
+          >
+            Contact
+          </Link>
         </nav>
         
         {/* Mobile Menu Button */}
@@ -45,34 +78,34 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white py-6 px-4 border-t border-gray-100">
           <nav className="flex flex-col space-y-6">
-            <a 
-              href="#about" 
+            <Link 
+              to="/#about" 
               className="text-gray-600 hover:text-black transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
             >
               About
-            </a>
-            <a 
-              href="#skills" 
+            </Link>
+            <Link 
+              to="/#skills" 
               className="text-gray-600 hover:text-black transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
             >
               Skills
-            </a>
+            </Link>
             <Link 
               to="/projects" 
               className="text-gray-600 hover:text-black transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
             >
               Projects
             </Link>
-            <a 
-              href="#contact" 
+            <Link 
+              to="/#contact" 
               className="text-gray-600 hover:text-black transition-colors"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
             >
               Contact
-            </a>
+            </Link>
           </nav>
         </div>
       )}
