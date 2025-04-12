@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-medium mb-8 leading-tight">
-            Hi, I'm George. <br />
+            Hi, I'm George Huang. <br />
             A aerospace engineer specializing in product design and additive manufacturing.
           </h1>
           
