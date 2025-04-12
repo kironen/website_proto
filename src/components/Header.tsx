@@ -2,6 +2,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { X, Menu } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,14 +15,14 @@ const Header = () => {
     <header className="w-full py-6 fixed top-0 bg-white z-50 border-b border-gray-100">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="font-medium text-lg tracking-tight">
-          <a href="#">Alex Smith</a>
+          <Link to="/">Alex Smith</Link>
         </div>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-10">
           <a href="#about" className="text-gray-600 hover:text-black transition-colors">About</a>
           <a href="#skills" className="text-gray-600 hover:text-black transition-colors">Skills</a>
-          <a href="#projects" className="text-gray-600 hover:text-black transition-colors">Projects</a>
+          <Link to="/projects" className="text-gray-600 hover:text-black transition-colors">Projects</Link>
           <a href="#contact" className="text-gray-600 hover:text-black transition-colors">Contact</a>
         </nav>
         
@@ -58,13 +59,13 @@ const Header = () => {
             >
               Skills
             </a>
-            <a 
-              href="#projects" 
+            <Link 
+              to="/projects" 
               className="text-gray-600 hover:text-black transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Projects
-            </a>
+            </Link>
             <a 
               href="#contact" 
               className="text-gray-600 hover:text-black transition-colors"

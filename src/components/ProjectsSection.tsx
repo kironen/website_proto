@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ProjectsSection = () => {
   const projects = [
@@ -86,6 +87,16 @@ const ProjectsSection = () => {
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <Link 
+            to="/projects" 
+            className="inline-flex items-center px-6 py-3 border border-black font-medium hover:bg-black hover:text-white transition-colors"
+          >
+            See More Projects
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>
