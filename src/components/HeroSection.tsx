@@ -8,13 +8,13 @@ const HeroSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-medium mb-8 leading-tight">
-            Hi, I'm Alex Smith. <br />
-            A software engineer specializing in web applications and user experience.
+            Hi, I'm George Huang. <br />
+            A aerospace engineer specializing in product design and additive manufacturing.
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl">
-            I build elegant software solutions with a focus on clean code, 
-            performance, and accessibility.
+            I build striking designs with a focus on form, 
+            ease of manufacture, and engineering principles.
           </p>
           
           <div className="space-x-6">
