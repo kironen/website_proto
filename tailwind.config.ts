@@ -71,6 +71,14 @@ export default {
 					darkBlue: '#1A1F2C',
 					gray: '#8E9196',
 					lightGray: '#F6F6F7'
+				},
+				warm: {
+					peach: '#FDE1D3',
+					orange: '#E86C40',
+					light: '#FFEEE3',
+					dark: '#B24C2E',
+					muted: '#D48F77',
+					background: '#FFF3EC'
 				}
 			},
 			borderRadius: {

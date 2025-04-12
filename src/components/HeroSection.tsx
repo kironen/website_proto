@@ -4,15 +4,15 @@ import { ArrowDown } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center bg-white pt-20">
+    <section className="min-h-screen flex items-center bg-warm-background pt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-medium mb-8 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-medium mb-8 leading-tight text-warm-dark">
             Hi, I'm George Huang. <br />
             A aerospace engineer specializing in product design and additive manufacturing.
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl">
+          <p className="text-lg md:text-xl text-warm-muted mb-12 max-w-2xl">
             I build striking designs with a focus on form, 
             ease of manufacture, and engineering principles.
           </p>
@@ -20,13 +20,13 @@ const HeroSection = () => {
           <div className="space-x-6">
             <a 
               href="#projects" 
-              className="inline-block px-8 py-3 border border-black font-medium hover:bg-black hover:text-white transition-colors"
+              className="inline-block btn-primary"
             >
               View My Work
             </a>
             <a 
               href="#about" 
-              className="inline-block px-8 py-3 text-gray-600 hover:text-black transition-colors"
+              className="inline-block btn-secondary"
             >
               Learn More
             </a>
@@ -35,7 +35,7 @@ const HeroSection = () => {
         
         <div className="flex justify-center mt-20">
           <a href="#about" className="animate-bounce">
-            <ArrowDown className="h-8 w-8 text-gray-400" />
+            <ArrowDown className="h-8 w-8 text-warm-muted" />
           </a>
         </div>
       </div>
