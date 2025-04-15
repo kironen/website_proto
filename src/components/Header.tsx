@@ -15,7 +15,7 @@ const Header = () => {
     <header className="w-full py-6 fixed top-0 bg-white z-50 border-b border-gray-100">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="font-medium text-lg tracking-tight">
-          <Link to="/">Alex Smith</Link>
+          <Link to="/">George Huang</Link>
         </div>
         
         {/* Desktop Navigation */}
