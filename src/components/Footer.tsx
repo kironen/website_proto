@@ -12,7 +12,7 @@ const Footer = () => {
           </div>
           <div className="flex space-x-6">
             <a 
-              href="https://github.com" 
+              href="https://github.com/kironen" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-gray-600 hover:text-black transition-colors"
@@ -21,7 +21,7 @@ const Footer = () => {
               <span className="sr-only">GitHub</span>
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/kironen/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-gray-600 hover:text-black transition-colors"
@@ -30,7 +30,7 @@ const Footer = () => {
               <span className="sr-only">LinkedIn</span>
             </a>
             <a 
-              href="mailto:contact@example.com" 
+              href="mailto:georgh3@uci.edu.com" 
               className="text-gray-600 hover:text-black transition-colors"
             >
               <Mail className="h-5 w-5" />
