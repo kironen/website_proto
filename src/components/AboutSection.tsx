@@ -10,38 +10,38 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl mx-auto">
           <div>
             <p className="text-lg mb-6">
-              I'm a passionate software engineer with 5+ years of experience designing 
-              and building scalable web applications. I enjoy tackling complex problems 
-              and creating efficient, maintainable solutions.
+              I'm a passionate aerospace engineer with 4+ years of experience designing 
+              CAD assemblies and using additive manufacturing tools. I enjoy incorporating 
+              creative design approaches to make striking products and solutions.
             </p>
             <p className="text-lg mb-6">
-              My approach combines technical expertise with a deep understanding of 
-              user needs, resulting in products that not only work flawlessly but 
-              also provide exceptional user experiences.
+              My approach combines engineering and design expertise with a understanding of 
+              rapid prototuping, resulting in a streamlined idea-to-product process that helps
+              create designs that people connect with.
             </p>
             <p className="text-lg">
-              When I'm not coding, you can find me hiking, reading about new technologies, 
-              or experimenting with photography.
+              When I'm not working, you can find me longboarding, beatboxing, 
+              or experimenting with film photography.
             </p>
           </div>
           
           <div className="space-y-8">
             <div>
               <h3 className="font-medium text-xl mb-3">Education</h3>
-              <p className="text-gray-600">M.S. Computer Science, University of Technology</p>
-              <p className="text-gray-600">B.S. Software Engineering, State University</p>
+              //<p className="text-gray-600">M.S. Computer Science, University of Technology</p>
+              <p className="text-gray-600">B.S. Aerospace Engineering, University of California, Irvine</p>
             </div>
             
             <div>
               <h3 className="font-medium text-xl mb-3">Experience</h3>
-              <p className="text-gray-600">Senior Developer, Tech Solutions Inc. (2020-present)</p>
-              <p className="text-gray-600">Software Engineer, Digital Innovations LLC (2018-2020)</p>
+              //<p className="text-gray-600">Senior Developer, Tech Solutions Inc. (2020-present)</p>
+              <p className="text-gray-600">Chief Mechanical Engineer, FLARE LLC (2024-present)</p>
             </div>
             
             <div>
               <h3 className="font-medium text-xl mb-3">Recognition</h3>
-              <p className="text-gray-600">Best Innovation Award, DevCon 2023</p>
-              <p className="text-gray-600">Open Source Contributor, React Community</p>
+              <p className="text-gray-600">Winner of Consumer Products Cohort, Stella Zhang New Venture Competition 2024</p>
+              //<p className="text-gray-600">Open Source Contributor, React Community</p>
             </div>
           </div>
         </div>
