@@ -9,7 +9,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-medium mb-8 leading-tight">
             Hi, I'm George. <br />
-            A aerospace engineer specializing in product design and additive manufacturing.
+            A aerospace engineer specializing in CAD design and additive manufacturing.
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl">
