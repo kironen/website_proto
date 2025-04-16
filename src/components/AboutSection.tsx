@@ -15,9 +15,9 @@ const AboutSection = () => {
               creative design approaches to make striking products and solutions.
             </p>
             <p className="text-lg mb-6">
-              My approach combines engineering and design expertise with rapid 
-              prototyping expertise, streamlining the idea-to-product process to create
-              designs with flair and that people connect with.
+              My approach combines engineering and design principles with 3D printing, 
+              CNC, and laser cutting expertise, streamlining the idea-to-product timeline 
+              to create designs with flair which people connect with.
             </p>
             <p className="text-lg">
               When I'm not working, you can find me longboarding, beatboxing, 
