@@ -16,7 +16,7 @@ const SkillsSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
-              <h3 className="text-xl font-medium mb-6 border-b pb-3">Frontend</h3>
+              <h3 className="text-xl font-medium mb-6 border-b pb-3">Mechanical</h3>
               <ul className="space-y-3">
                 {skills.frontend.map((skill, index) => (
                   <li key={index} className="text-gray-700">{skill}</li>
@@ -25,7 +25,7 @@ const SkillsSection = () => {
             </div>
             
             <div>
-              <h3 className="text-xl font-medium mb-6 border-b pb-3">Backend</h3>
+              <h3 className="text-xl font-medium mb-6 border-b pb-3">Electrical</h3>
               <ul className="space-y-3">
                 {skills.backend.map((skill, index) => (
                   <li key={index} className="text-gray-700">{skill}</li>
@@ -34,7 +34,7 @@ const SkillsSection = () => {
             </div>
             
             <div>
-              <h3 className="text-xl font-medium mb-6 border-b pb-3">Tools & Methods</h3>
+              <h3 className="text-xl font-medium mb-6 border-b pb-3">Soft Skills</h3>
               <ul className="space-y-3">
                 {skills.tools.map((skill, index) => (
                   <li key={index} className="text-gray-700">{skill}</li>
