@@ -8,6 +8,7 @@ import { AnimatePresence } from 'framer-motion';
 import PageTransition from "./components/PageTransition";
 import Index from "./pages/Index";
 import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<PageTransition><Index /></PageTransition>} />
             <Route path="/projects" element={<PageTransition><Projects /></PageTransition>} />
+            <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
             <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
           </Routes>
         </AnimatePresence>

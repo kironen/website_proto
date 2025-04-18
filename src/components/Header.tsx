@@ -22,7 +22,7 @@ const Header = () => {
         <nav className="hidden md:flex space-x-10">
           <Link to="/" className="text-gray-600 hover:text-black transition-colors">Home</Link>
           <Link to="/projects" className="text-gray-600 hover:text-black transition-colors">Projects</Link>
-          <a href="#contact" className="text-gray-600 hover:text-black transition-colors">Contact</a>
+          <Link to="/contact" className="text-gray-600 hover:text-black transition-colors">Contact</Link>
         </nav>
         
         {/* Mobile Menu Button */}
@@ -58,13 +58,13 @@ const Header = () => {
             >
               Projects
             </Link>
-            <a 
-              href="#contact" 
+            <Link 
+              to="/contact" 
               className="text-gray-600 hover:text-black transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
-            </a>
+            </Link>
           </nav>
         </div>
       )}
