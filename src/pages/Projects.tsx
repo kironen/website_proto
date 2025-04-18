@@ -2,6 +2,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SkillsSection from '../components/SkillsSection';
 import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
@@ -60,6 +61,7 @@ const Projects = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1 pt-20">
+        <SkillsSection />
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl font-medium mb-12 text-center">All Projects</h1>

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -18,12 +19,12 @@ const HeroSection = () => {
           </p>
           
           <div className="space-x-6">
-            <a 
-              href="#projects" 
+            <Link 
+              to="/projects" 
               className="inline-block px-8 py-3 border border-black font-medium hover:bg-black hover:text-white transition-colors"
             >
               View My Work
-            </a>
+            </Link>
             <a 
               href="#about" 
               className="inline-block px-8 py-3 text-gray-600 hover:text-black transition-colors"
