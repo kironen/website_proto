@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const AboutSection = () => {
@@ -8,6 +7,16 @@ const AboutSection = () => {
         <h2 className="section-heading text-center">About</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl mx-auto">
+          {/* Photo Column */}
+          <div className="flex justify-center items-start">
+            <img 
+              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+              alt="Profile"
+              className="rounded-lg shadow-lg w-full max-w-md object-cover"
+            />
+          </div>
+          
+          {/* Text Content Column */}
           <div>
             <p className="text-lg mb-6">
               I'm a passionate aerospace engineer with 4+ years of experience designing 
@@ -25,7 +34,7 @@ const AboutSection = () => {
             </p>
           </div>
           
-          <div className="space-y-8">
+          <div className="space-y-8 md:col-start-2">
             <div>
               <h3 className="font-medium text-xl mb-3">Education</h3>
               <p className="text-gray-600">B.S. Aerospace Engineering, University of California, Irvine</p>
