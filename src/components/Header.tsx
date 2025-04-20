@@ -14,14 +14,8 @@ const Header = () => {
   return (
     <header className="w-full py-6 fixed top-0 bg-white z-50 border-b border-gray-100">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div>
-          <Link to="/">
-            <img 
-              src="https://images.unsplash.com/photo-1518495973542-4542c06a5843"
-              alt="Logo"
-              className="h-8 w-auto object-contain"
-            />
-          </Link>
+        <div className="font-medium text-lg tracking-tight">
+          <Link to="/">George Huang</Link>
         </div>
         
         {/* Desktop Navigation */}
