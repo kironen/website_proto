@@ -15,11 +15,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div>
           <Link to="/">
-            <img 
-              src="logo.jpg"
-              alt="Logo"
-              className="h-8 w-auto object-contain"
-            />
+            <iframe src="https://drive.google.com/file/d/1QQVVssIbPP23J_jm7hid0X8sBRPfqnKH/preview" width="640" height="480" allow="autoplay"></iframe>
           </Link>
         </div>
         
