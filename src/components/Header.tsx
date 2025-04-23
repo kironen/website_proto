@@ -13,13 +13,13 @@ const Header = () => {
   return (
     <header className="w-full py-6 fixed top-0 bg-white z-50 border-b border-gray-100">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div>
+        <div className="h-8">
           <Link to="/">
             <img 
-               src="https://drive.google.com/file/d/1QQVVssIbPP23J_jm7hid0X8sBRPfqnKH/preview" width="640" height="480"
-               alt="Logo"
-               className="h-8 w-auto object-contain"
-             />
+              src="/lovable-uploads/4814f4db-12c8-4676-b86b-3ee077f35891.png"
+              alt="GH Logo"
+              className="h-full w-auto object-contain"
+            />
           </Link>
         </div>
         
