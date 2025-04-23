@@ -18,7 +18,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/4814f4db-12c8-4676-b86b-3ee077f35891.png"
               alt="GH Logo"
-              className="h-full w-auto object-contain"
+              className="h-10 w-auto object-contain" // Slightly increased height from h-8 to h-10
             />
           </Link>
         </div>
