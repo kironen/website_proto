@@ -16,7 +16,7 @@ const Header = () => {
         <div>
           <Link to="/">
             <img 
-              src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+              src="logo.jpg"
               alt="Logo"
               className="h-8 w-auto object-contain"
             />
