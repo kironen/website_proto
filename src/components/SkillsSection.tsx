@@ -45,20 +45,20 @@ const SkillsSection = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
             <div className="text-center">
-              <span className="block text-4xl font-medium">20+</span>
+              <span className="block text-4xl font-medium">8+</span>
               <span className="text-gray-600">Projects</span>
             </div>
             <div className="text-center">
-              <span className="block text-4xl font-medium">5+</span>
+              <span className="block text-4xl font-medium">4+</span>
               <span className="text-gray-600">Years Exp</span>
             </div>
             <div className="text-center">
-              <span className="block text-4xl font-medium">15+</span>
+              <span className="block text-4xl font-medium">5+</span>
               <span className="text-gray-600">Clients</span>
             </div>
             <div className="text-center">
-              <span className="block text-4xl font-medium">24/7</span>
-              <span className="text-gray-600">Support</span>
+              <span className="block text-4xl font-medium">Irvine</span>
+              <span className="text-gray-600">Based</span>
             </div>
           </div>
         </div>
