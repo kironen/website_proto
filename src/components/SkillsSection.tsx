@@ -3,9 +3,9 @@ import React from 'react';
 
 const SkillsSection = () => {
   const skills = {
-    frontend: ['JavaScript/TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'HTML5/CSS3'],
-    backend: ['Node.js', 'Python', 'SQL/NoSQL Databases', 'GraphQL', 'RESTful APIs'],
-    tools: ['Git', 'Docker', 'AWS', 'CI/CD', 'Jest/Testing Library']
+    frontend: ['CAD Programs', 'Shop Manufacturing', 'Additive Manufacturing', 'Technical Drawing'],
+    backend: ['Soldering', 'PCB Experience', 'Arduino', 'Programming'],
+    tools: ['Leadership', 'Professional Communication', 'Bass Guitar', 'Microsoft Suite']
   };
 
   return (
@@ -34,7 +34,7 @@ const SkillsSection = () => {
             </div>
             
             <div>
-              <h3 className="text-xl font-medium mb-6 border-b pb-3">Soft Skills</h3>
+              <h3 className="text-xl font-medium mb-6 border-b pb-3">Additional Skills</h3>
               <ul className="space-y-3">
                 {skills.tools.map((skill, index) => (
                   <li key={index} className="text-gray-700">{skill}</li>
