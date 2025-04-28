@@ -5,6 +5,7 @@ export interface Project {
   description: string;
   fullDescription?: string;
   image: string;
+  additionalImages?: string[];
   tags: string[];
   github: string;
   demo: string;

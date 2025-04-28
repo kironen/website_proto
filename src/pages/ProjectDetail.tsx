@@ -5,6 +5,7 @@ import { ArrowLeft } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { projects } from '../data/projects';
+import { Button } from '../components/ui/button';
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -13,6 +14,9 @@ const ProjectDetail = () => {
   if (!project) {
     return <div>Project not found</div>;
   }
+
+  // Split the full description into paragraphs
+  const paragraphs = project.fullDescription?.split('\n\n') || [];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -51,10 +55,71 @@ const ProjectDetail = () => {
 
             <div className="prose max-w-none">
               <p className="text-lg text-gray-600 mb-6">{project.description}</p>
-              {project.fullDescription && (
-                <div className="mt-8">
-                  <h2 className="text-2xl font-medium mb-4">Project Details</h2>
-                  <p className="text-gray-600">{project.fullDescription}</p>
+              
+              {paragraphs.length > 0 && (
+                <div className="mt-8 space-y-12">
+                  {/* First paragraph */}
+                  <div>
+                    <h2 className="text-2xl font-medium mb-4">Project Details</h2>
+                    <p className="text-gray-600">{paragraphs[0]}</p>
+                  </div>
+
+                  {/* First additional image, if available */}
+                  {project.additionalImages && project.additionalImages.length > 0 && (
+                    <div className="my-8">
+                      <img
+                        src={project.additionalImages[0]}
+                        alt={`${project.title} - additional view 1`}
+                        className="w-full h-auto rounded-lg shadow-md"
+                      />
+                    </div>
+                  )}
+
+                  {/* Second paragraph */}
+                  {paragraphs.length > 1 && (
+                    <div>
+                      <h3 className="text-xl font-medium mb-3">Development Process</h3>
+                      <p className="text-gray-600">{paragraphs[1]}</p>
+                    </div>
+                  )}
+
+                  {/* Second additional image, if available */}
+                  {project.additionalImages && project.additionalImages.length > 1 && (
+                    <div className="my-8">
+                      <img
+                        src={project.additionalImages[1]}
+                        alt={`${project.title} - additional view 2`}
+                        className="w-full h-auto rounded-lg shadow-md"
+                      />
+                    </div>
+                  )}
+
+                  {/* Third paragraph */}
+                  {paragraphs.length > 2 && (
+                    <div>
+                      <h3 className="text-xl font-medium mb-3">Testing & Results</h3>
+                      <p className="text-gray-600">{paragraphs[2]}</p>
+                    </div>
+                  )}
+
+                  {/* Third additional image, if available */}
+                  {project.additionalImages && project.additionalImages.length > 2 && (
+                    <div className="my-8">
+                      <img
+                        src={project.additionalImages[2]}
+                        alt={`${project.title} - additional view 3`}
+                        className="w-full h-auto rounded-lg shadow-md"
+                      />
+                    </div>
+                  )}
+
+                  {/* Fourth paragraph */}
+                  {paragraphs.length > 3 && (
+                    <div>
+                      <h3 className="text-xl font-medium mb-3">Conclusion</h3>
+                      <p className="text-gray-600">{paragraphs[3]}</p>
+                    </div>
+                  )}
                 </div>
               )}
             </div>
