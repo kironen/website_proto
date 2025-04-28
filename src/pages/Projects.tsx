@@ -22,7 +22,7 @@ const Projects = () => {
               {projects.map((project) => (
                 <div 
                   key={project.id} 
-                  className="bg-white border border-gray-100 rounded overflow-hidden shadow hover:shadow-md transition-shadow duration-300 cursor-pointer"
+                  className="bg-white border border-gray-100 rounded-sm overflow-hidden shadow hover:shadow-md transition-shadow duration-300 cursor-pointer"
                   onClick={() => navigate(`/projects/${project.id}`)}
                 >
                   <div className="h-56 overflow-hidden">
@@ -39,7 +39,7 @@ const Projects = () => {
                     
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map((tag, idx) => (
-                        <span key={idx} className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                        <span key={idx} className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-sm">
                           {tag}
                         </span>
                       ))}
