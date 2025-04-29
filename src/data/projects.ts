@@ -15,7 +15,7 @@ export const projects: Project[] = [
     ],
     tags: ["Arduino", "3D Printing", "Electronics", "Hardware"],
     github: "https://github.com",
-    demo: "https://example.com"
+    demo: "https://www.youtube.com/shorts/IBV8C0PIMO8?feature=share"
   },
   {
     id: "engr-7b-autonomous-rover",
@@ -33,14 +33,14 @@ export const projects: Project[] = [
     demo: "https://example.com"
   },
   {
-    id: "ai-content-generator",
-    title: "AI Content Generator",
-    description: "An AI-powered application that generates blog posts, social media content, and marketing copy based on user inputs.",
+    id: "custom-headphones",
+    title: "Custom Heaphones",
+    description: "A design project for the CCPL Digital Media Lab to design audiophile level headphones with only desktop 3D printer.",
     fullDescription: "This AI-powered content generation tool helps creators and marketers produce high-quality content efficiently. Using OpenAI's API and Next.js, the application can generate blog posts, social media content, and marketing copy tailored to specific requirements and brand voice.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2832&q=80",
     tags: ["Python", "OpenAI API", "Next.js", "TailwindCSS"],
     github: "https://github.com",
-    demo: "https://example.com"
+    demo: "https://www.instagram.com/reel/CvcXRVfxC18/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     id: "personal-finance-tracker",
