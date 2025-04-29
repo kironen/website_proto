@@ -30,7 +30,7 @@ export const projects: Project[] = [
     ],
     tags: ["Arduino", "SolidWorks", "Robotics", "Team Leadership"],
     github: "https://github.com",
-    demo: "https://example.com"
+    demo: "https://youtube.com/shorts/10yv3xw_rP0?feature=share"
   },
   {
     id: "custom-headphones",
