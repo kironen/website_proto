@@ -3,6 +3,7 @@ import React from 'react';
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -19,9 +20,15 @@ const ContactSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
-              <p className="text-lg mb-8">
-                I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
-              </p>
+              <div className="flex flex-col items-center mb-8">
+                <Avatar className="w-32 h-32 mb-4">
+                  <AvatarImage src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" alt="Profile Photo" />
+                  <AvatarFallback>GH</AvatarFallback>
+                </Avatar>
+                <p className="text-lg mb-8 text-center">
+                  I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+                </p>
+              </div>
               
               <div className="space-y-6">
                 <div className="flex items-start">
