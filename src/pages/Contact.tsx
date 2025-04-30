@@ -32,7 +32,7 @@ const Contact = () => {
                       />
                     </div>
                     <p className="text-lg mb-8 text-center">
-                      I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+                      Thank you for checking out my website! Feel free to contact me with any questions.
                     </p>
                   </div>
                   
