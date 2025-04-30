@@ -41,6 +41,7 @@ export const projects: Project[] = [
       "https://i.imgur.com/a90f1A0.png",
     ],
     tags: ["Product Design", "3D Printing", "GD&T", "Creativity"],
+    github: "https://github.com",
     demo: "https://www.instagram.com/reel/CvcXRVfxC18/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
