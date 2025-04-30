@@ -45,33 +45,18 @@ export const projects: Project[] = [
     demo: "https://www.instagram.com/reel/CvcXRVfxC18/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
-    id: "personal-finance-tracker",
-    title: "Personal Finance Tracker",
+    id: "parametric-saxophone-mouthpiece",
+    title: "Parametric Saxophone Mouthpiece",
     description: "A responsive web application that helps users track expenses, set budgets, and visualize spending patterns with interactive charts.",
-    fullDescription: "This personal finance management tool helps users take control of their finances through intuitive expense tracking, budget setting, and visual analytics. Built with React and Redux, it features interactive charts powered by Recharts and secure data storage with Firebase.",
-    image: "https://images.unsplash.com/photo-1564939558297-fc396f18e5c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
-    tags: ["React", "Redux", "Firebase", "Recharts"],
+    fullDescription: "As a saxophone player, I was really inspired by the design philosophy of Syos, which is a company specializing in custom mouthpieces for musicians. This project involved developing a fully parametric 3D model of a saxophone mouthpiece which would allow for rapid customization of critical acoustic and airflow properties. The goal was to create a platform for experimenting with how internal geometry could affect tone, projection, and playability, while using 3D printing and parametric modeling as tools for iterative design. \n\nThe mouthpiece was developed in Fusion 360, where I built a fully parametric CAD model enabling real-time adjustments to variables such as tip opening, baffle shape, chamber volume, beak profile, and facing length. These parameters could be fine-tuned with precision, enabling fast generation of many designs tailored for different player preferences or performance sounds. I referenced Selmer and Yamaha drawings and mouthpiece research to create a rudimentary mouthpiece design and then began modifying them and testing pieces. \n\nEach prototype was 3D printed on FDM machines and post-processed with wet sanding and polishing to ensure an airtight seal on the table and rails. Several versions were tested with different reed strengths, and I played each one to evaluate tonal characteristics, ease of articulation, and dynamic response. I also got feedback from other saxophonists to incorporate into later designs. \n\nThis project really challenged and helped me learn so much about parametric modeling, acoustic design, and precision 3D printing in a real-world musical application. It also deepened my understanding of how subtle design choices impact user experience in a performance context. The result is a versatile toolset for prototyping saxophone mouthpieces with moderate performance but customized to the player’s tone and playing style. I was really excited working on this project as it bridged the gap between engineering and musical artistry.",
+    image: "https://i.imgur.com/jgnl5g8.png",
+    additionalImages: [
+      "https://i.imgur.com/yJtkDT5.jpeg",
+      "https://i.imgur.com/fqJxj9N.jpeg",
+      "https://i.imgur.com/7qp5mpy.jpeg"
+    ],
+    tags: ["Acoustics", "Parametric Modeling", "Testing", "Surface Finishing"],
     github: "https://github.com",
     demo: "https://example.com"
   },
-  {
-    id: "weather-forecast-app",
-    title: "Weather Forecast App",
-    description: "A weather application that provides real-time forecasts, location-based services, and customizable alerts for severe weather conditions.",
-    fullDescription: "This weather forecast application delivers accurate, real-time weather information with location-based services and customizable severe weather alerts. It's built as a Progressive Web App using JavaScript and the OpenWeather API, featuring interactive maps powered by Leaflet.",
-    image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    tags: ["JavaScript", "OpenWeather API", "Leaflet", "PWA"],
-    github: "https://github.com",
-    demo: "https://example.com"
-  },
-  {
-    id: "recipe-sharing-platform",
-    title: "Recipe Sharing Platform",
-    description: "A community-driven platform where users can share, discover, and review recipes with advanced filtering and search capabilities.",
-    fullDescription: "This recipe sharing platform brings food enthusiasts together in a community-driven space where they can share and discover recipes. Built with Vue.js and GraphQL, it features advanced search and filtering capabilities, user reviews, and a responsive design for optimal mobile experience.",
-    image: "https://images.unsplash.com/photo-1607478900766-efe13248b125?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80",
-    tags: ["Vue.js", "Node.js", "PostgreSQL", "GraphQL"],
-    github: "https://github.com",
-    demo: "https://example.com"
-  }
 ];
