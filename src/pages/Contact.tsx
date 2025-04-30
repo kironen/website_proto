@@ -26,7 +26,7 @@ const Contact = () => {
                   <div className="flex flex-col items-center mb-8">
                     <div className="w-full h-80 mb-6 overflow-hidden rounded-lg shadow-md">
                       <img 
-                        src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" 
+                        src="https://i.imgur.com/c7t95le.jpeg" 
                         alt="Profile Photo" 
                         className="w-full h-full object-cover"
                       />
