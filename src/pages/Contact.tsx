@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -37,35 +36,30 @@ const Contact = () => {
                     </p>
                   </div>
                   
-                  <div className="space-y-6">
-                    <div className="flex items-start">
-                      <div className="mr-4">
-                        <Mail className="h-6 w-6 text-gray-400" />
+                  {/* Contact information in horizontal layout */}
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="flex flex-col items-center text-center p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                      <div className="mb-3">
+                        <Mail className="h-6 w-6 text-gray-400 mx-auto" />
                       </div>
-                      <div>
-                        <h4 className="font-medium">Email</h4>
-                        <p className="text-gray-600">georgh3@uci.edu</p>
-                      </div>
+                      <h4 className="font-medium">Email</h4>
+                      <p className="text-gray-600">georgh3@uci.edu</p>
                     </div>
                     
-                    <div className="flex items-start">
-                      <div className="mr-4">
-                        <Phone className="h-6 w-6 text-gray-400" />
+                    <div className="flex flex-col items-center text-center p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                      <div className="mb-3">
+                        <Phone className="h-6 w-6 text-gray-400 mx-auto" />
                       </div>
-                      <div>
-                        <h4 className="font-medium">Phone</h4>
-                        <p className="text-gray-600">+1 (317) 798-7849</p>
-                      </div>
+                      <h4 className="font-medium">Phone</h4>
+                      <p className="text-gray-600">+1 (317) 798-7849</p>
                     </div>
                     
-                    <div className="flex items-start">
-                      <div className="mr-4">
-                        <MapPin className="h-6 w-6 text-gray-400" />
+                    <div className="flex flex-col items-center text-center p-4 rounded-lg hover:bg-gray-100 transition-colors">
+                      <div className="mb-3">
+                        <MapPin className="h-6 w-6 text-gray-400 mx-auto" />
                       </div>
-                      <div>
-                        <h4 className="font-medium">Location</h4>
-                        <p className="text-gray-600">Irvine, CA</p>
-                      </div>
+                      <h4 className="font-medium">Location</h4>
+                      <p className="text-gray-600">Irvine, CA</p>
                     </div>
                   </div>
                 </div>
