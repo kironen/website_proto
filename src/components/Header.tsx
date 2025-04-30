@@ -16,7 +16,7 @@ const Header = () => {
         <div className="h-10">
           <Link to="/">
             <img 
-              src="/lovable-uploads/4814f4db-12c8-4676-b86b-3ee077f35891.png"
+              src="https://i.imgur.com/PQZp11K.jpeg"
               alt="GH Logo"
               className="h-10 w-auto object-contain" // Slightly increased height from h-8 to h-10
             />
