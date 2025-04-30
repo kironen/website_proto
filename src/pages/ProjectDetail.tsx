@@ -97,7 +97,7 @@ const ProjectDetail = () => {
                   {/* Third paragraph */}
                   {paragraphs.length > 2 && (
                     <div>
-                      <h3 className="text-xl font-medium mb-3">Testing & Results</h3>
+                      <h3 className="text-xl font-medium mb-3">Further Work</h3>
                       <p className="text-gray-600">{paragraphs[2]}</p>
                     </div>
                   )}
