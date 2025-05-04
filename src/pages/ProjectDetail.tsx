@@ -14,12 +14,17 @@ const ProjectDetail = () => {
   const project = projects.find(p => p.id === id);
 
   useEffect(() => {
-    // Only navigate away if we're not in a loading state and project is not found
-    if (!isLoading && !project && id) {
-      navigate('/projects');
-    } else {
+    // Set loading to false after a short delay to ensure data is ready
+    const timer = setTimeout(() => {
       setIsLoading(false);
-    }
+      
+      // Only navigate if project is not found and we're not in the middle of a navigation
+      if (!project && id && !isLoading) {
+        navigate('/projects', { replace: true });
+      }
+    }, 100);
+    
+    return () => clearTimeout(timer);
   }, [project, id, navigate, isLoading]);
 
   if (isLoading) {
@@ -35,24 +40,10 @@ const ProjectDetail = () => {
   }
 
   if (!project) {
-    return (
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <div className="flex-1 pt-24 pb-16 flex items-center justify-center">
-          <div className="text-center">
-            <h2 className="text-2xl font-medium mb-4">Project not found</h2>
-            <Link 
-              to="/projects" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800"
-            >
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Return to Projects
-            </Link>
-          </div>
-        </div>
-        <Footer />
-      </div>
-    );
+    // Instead of showing a not found message, we'll directly navigate back to projects
+    // This code should rarely execute due to the useEffect above
+    navigate('/projects', { replace: true });
+    return null;
   }
 
   // Split the full description into paragraphs
@@ -66,6 +57,10 @@ const ProjectDetail = () => {
           <Link 
             to="/projects" 
             className="inline-flex items-center text-gray-600 hover:text-black mb-8"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate('/projects');
+            }}
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Projects
