@@ -14,13 +14,19 @@ const ProjectDetail = () => {
   const project = projects.find(p => p.id === id);
 
   useEffect(() => {
-    // Only navigate away if we're not in a loading state and project is not found
-    if (!isLoading && !project && id) {
-      navigate('/projects');
-    } else {
+    // Set loading to false after a brief delay to allow for fade animation
+    const timer = setTimeout(() => {
       setIsLoading(false);
-    }
-  }, [project, id, navigate, isLoading]);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Handle navigation back to projects page
+  const handleBackToProjects = (e) => {
+    e.preventDefault();
+    navigate('/projects', { replace: true });
+  };
 
   if (isLoading) {
     return (
@@ -34,21 +40,19 @@ const ProjectDetail = () => {
     );
   }
 
+  // If project not found, simply redirect to projects page
   if (!project) {
+    // Redirect silently to projects page
+    useEffect(() => {
+      navigate('/projects', { replace: true });
+    }, [navigate]);
+    
+    // Return loading state while redirecting
     return (
       <div className="min-h-screen flex flex-col">
         <Header />
         <div className="flex-1 pt-24 pb-16 flex items-center justify-center">
-          <div className="text-center">
-            <h2 className="text-2xl font-medium mb-4">Project not found</h2>
-            <Link 
-              to="/projects" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800"
-            >
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Return to Projects
-            </Link>
-          </div>
+          <p>Loading projects...</p>
         </div>
         <Footer />
       </div>
@@ -63,13 +67,14 @@ const ProjectDetail = () => {
       <Header />
       <main className="flex-1 pt-24 pb-16">
         <div className="container mx-auto px-4">
-          <Link 
-            to="/projects" 
+          <a 
+            href="#"
+            onClick={handleBackToProjects}
             className="inline-flex items-center text-gray-600 hover:text-black mb-8"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Projects
-          </Link>
+          </a>
 
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl font-medium mb-6">{project.title}</h1>
