@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -9,14 +9,24 @@ import { Button } from '../components/ui/button';
 
 const ProjectDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
   const project = projects.find(p => p.id === id);
 
-  if (!project) {
-    return <div>Project not found</div>;
+  useEffect(() => {
+    if (!project && id) {
+      navigate('/projects');
+    } else {
+      setIsLoading(false);
+    }
+  }, [project, id, navigate]);
+
+  if (isLoading) {
+    return null;
   }
 
   // Split the full description into paragraphs
-  const paragraphs = project.fullDescription?.split('\n\n') || [];
+  const paragraphs = project?.fullDescription?.split('\n\n') || [];
 
   return (
     <div className="min-h-screen flex flex-col">
