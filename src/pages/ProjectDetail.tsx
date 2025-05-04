@@ -14,19 +14,49 @@ const ProjectDetail = () => {
   const project = projects.find(p => p.id === id);
 
   useEffect(() => {
-    if (!project && id) {
+    // Only navigate away if we're not in a loading state and project is not found
+    if (!isLoading && !project && id) {
       navigate('/projects');
     } else {
       setIsLoading(false);
     }
-  }, [project, id, navigate]);
+  }, [project, id, navigate, isLoading]);
 
   if (isLoading) {
-    return null;
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <div className="flex-1 pt-24 pb-16 flex items-center justify-center">
+          <p>Loading project details...</p>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (!project) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <div className="flex-1 pt-24 pb-16 flex items-center justify-center">
+          <div className="text-center">
+            <h2 className="text-2xl font-medium mb-4">Project not found</h2>
+            <Link 
+              to="/projects" 
+              className="inline-flex items-center text-blue-600 hover:text-blue-800"
+            >
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Return to Projects
+            </Link>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
   }
 
   // Split the full description into paragraphs
-  const paragraphs = project?.fullDescription?.split('\n\n') || [];
+  const paragraphs = project.fullDescription?.split('\n\n') || [];
 
   return (
     <div className="min-h-screen flex flex-col">
