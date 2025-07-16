@@ -36,17 +36,12 @@ const HeroSection = () => {
           </div>
           
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-gray-100 shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=800&fit=crop&crop=face"
-                  alt="George - Aerospace Engineer"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-engineer-blue rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                GE
-              </div>
+            <div className="w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-gray-100 shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=800&fit=crop&crop=face"
+                alt="George - Aerospace Engineer"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
