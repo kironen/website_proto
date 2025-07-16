@@ -66,6 +66,10 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
+				burgundy: {
+					DEFAULT: 'hsl(var(--burgundy))',
+					foreground: 'hsl(var(--burgundy-foreground))'
+				},
 				engineer: {
 					blue: '#0EA5E9',
 					darkBlue: '#1A1F2C',

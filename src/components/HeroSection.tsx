@@ -10,7 +10,7 @@ const HeroSection = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <h1 className="text-4xl md:text-6xl font-medium mb-8 leading-tight">
-              Hi, I'm George. <br />
+              Hi, I'm <span className="text-burgundy">George</span>. <br />
               A aerospace engineer specializing in CAD design and additive manufacturing.
             </h1>
             
